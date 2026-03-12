@@ -64,9 +64,9 @@ where
 
 
 masodf2 a b c 
- | delta <0 = error "komplex"
- |delta == 0 = [gy1]
- |otherwise = [gy1, gy2]
+  | delta <0 = error "komplex"
+  |delta == 0 = [gy1]
+  |otherwise = [gy1, gy2]
 
 
 
