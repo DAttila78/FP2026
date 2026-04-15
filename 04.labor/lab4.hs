@@ -105,5 +105,17 @@ listaN2 ls n i
     | otherwise      = listaN2 ls n (i+1)
 
 -- - tükrözi egy lista elemeit,
+
+tukor ls = reverse ls 
+
+tukor2 ls = fold1 (\res x -> x : res ) [] ls \
+
+tukor3 ls = map tukorSzam ls 
+    where tukorSzam x 
+        | x  < 10 = [x]
+        |otherwise = mod x 10 : tukorSzam ( div x 10)
+
+
+
 -- - két módszerrel is meghatározza egy lista legnagyobb elemeinek pozícióit: a lista elemeit kétszer járja be, illetve úgy hogy a lista elemeit csak egyszer járja be,
 -- - meghatározza egy lista leggyakrabban előforduló elemét.
